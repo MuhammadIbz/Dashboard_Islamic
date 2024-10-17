@@ -67,14 +67,20 @@ class Dashboard extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
-              Column(
-                children: [
-                  Image.asset("assets/images/ic_menu_doa.png"),
-                  Text("Doa-Doa",style: TextStyle(
-                    fontFamily: "PoppinsSemiBold", 
-                    fontSize: 14,
-                    color: ColorApp.white),)
-                ],
+              
+              GestureDetector(
+                onTap: (){
+                   Navigator.pushNamed(context, '/doa');
+                },
+                child: Column(
+                  children: [
+                    Image.asset("assets/images/ic_menu_doa.png"),
+                    Text("Doa-Doa",style: TextStyle(
+                      fontFamily: "PoppinsSemiBold", 
+                      fontSize: 14,
+                      color: ColorApp.white),)
+                  ],
+                ),
               ),
 
               SizedBox(width: 12,),
