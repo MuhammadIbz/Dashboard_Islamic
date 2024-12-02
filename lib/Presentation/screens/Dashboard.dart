@@ -11,7 +11,7 @@ class Dashboard extends StatelessWidget {
       return Container(
         height: 250,
         width: double.infinity,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             image: DecorationImage(
           image: AssetImage("assets/images/bg_header_dashboard_morning.png"),
           fit: BoxFit.cover,
@@ -21,26 +21,26 @@ class Dashboard extends StatelessWidget {
             Align(
               alignment: Alignment.topLeft,
               child: Container(
-                  margin: EdgeInsets.all(12),
-                  padding: EdgeInsets.all(6),
+                  margin: const EdgeInsets.all(12),
+                  padding: const EdgeInsets.all(6),
                   decoration: BoxDecoration(
                       color: ColorApp.white,
                       borderRadius: BorderRadius.circular(8)),
-                  child: Text("Assalamualaikum",style: TextStyle(fontFamily: "PoppinsRegular"),)),
+                  child: const Text("Assalamualaikum",style: TextStyle(fontFamily: "PoppinsRegular"),)),
             ),
-            SizedBox(height: 16,),
-            Text
+            const SizedBox(height: 16,),
+            const Text
             ("Subuh", 
             style: TextStyle(
               fontFamily: "PoppinsMedium"
               ),
               ),
-              SizedBox(height: 4,),
-              Text("04:48", style: TextStyle(fontFamily: "PoppinsBold", fontSize: 36
+              const SizedBox(height: 4,),
+              const Text("04:48", style: TextStyle(fontFamily: "PoppinsBold", fontSize: 36
               ),
               ),
-              SizedBox(height: 4,),
-              Row(
+              const SizedBox(height: 4,),
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(Icons.location_on_rounded,
@@ -57,8 +57,8 @@ class Dashboard extends StatelessWidget {
     
     Widget CardMenus(){
       return Container(
-        padding: EdgeInsets.all(16),
-        margin: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
+        margin: const EdgeInsets.all(16),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(24),
           color: ColorApp.primary
@@ -75,7 +75,7 @@ class Dashboard extends StatelessWidget {
                 child: Column(
                   children: [
                     Image.asset("assets/images/ic_menu_doa.png"),
-                    Text("Doa-Doa",style: TextStyle(
+                    const Text("Doa-Doa",style: TextStyle(
                       fontFamily: "PoppinsSemiBold", 
                       fontSize: 14,
                       color: ColorApp.white),)
@@ -83,40 +83,55 @@ class Dashboard extends StatelessWidget {
                 ),
               ),
 
-              SizedBox(width: 12,),
+              const SizedBox(width: 12,),
 
-              Column(
-                children: [
-                  Image.asset("assets/images/ic_menu_zakat.png"),
-                  Text("Zakat",style: TextStyle(
-                    fontFamily: "PoppinsSemiBold", 
-                    fontSize: 14,
-                    color: ColorApp.white),)
-                ],
+              GestureDetector(
+                onTap: (){
+                  Navigator.pushNamed(context, "/zakat");
+                },
+                child: Column(
+                  children: [
+                    Image.asset("assets/images/ic_menu_zakat.png"),
+                    const Text("Zakat",style: TextStyle(
+                      fontFamily: "PoppinsSemiBold", 
+                      fontSize: 14,
+                      color: ColorApp.white),)
+                  ],
+                ),
               ),
 
-              SizedBox(width: 12,),
+              const SizedBox(width: 12,),
 
-              Column(
-                children: [
-                  Image.asset("assets/images/ic_menu_jadwal_sholat.png"),
-                  Text("Sholat",style: TextStyle(
-                    fontFamily: "PoppinsSemiBold", 
-                    fontSize: 14,
-                    color: ColorApp.white),)
-                ],
+              GestureDetector(
+                onTap: (){
+                  Navigator.pushNamed(context, '/jadwal-sholat');
+                },
+                child: Column(
+                  children: [
+                    Image.asset("assets/images/ic_menu_jadwal_sholat.png"),
+                    const Text("Sholat",style: TextStyle(
+                      fontFamily: "PoppinsSemiBold", 
+                      fontSize: 14,
+                      color: ColorApp.white),)
+                  ],
+                ),
               ),
 
-              SizedBox(width: 12,),
+              const SizedBox(width: 12,),
 
-              Column(
-                children: [
-                  Image.asset("assets/images/ic_menu_video_kajian.png"),
-                  Text("Video",style: TextStyle(
-                    fontFamily: "PoppinsSemiBold", 
-                    fontSize: 14,
-                    color: ColorApp.white),)
-                ],
+              GestureDetector(
+                onTap: (){
+                  Navigator.pushNamed(context, '/video-kajian');
+                },
+                child: Column(
+                  children: [
+                    Image.asset("assets/images/ic_menu_video_kajian.png"),
+                    const Text("Video",style: TextStyle(
+                      fontFamily: "PoppinsSemiBold", 
+                      fontSize: 14,
+                      color: ColorApp.white),)
+                  ],
+                ),
               )
             ],
           ),
@@ -126,10 +141,10 @@ class Dashboard extends StatelessWidget {
 
     Widget Inspiration(){
       return Container(
-        margin: EdgeInsets.all(16),
+        margin: const EdgeInsets.all(16),
         child: Column(
           children: [
-            Align(
+            const Align(
               alignment: Alignment.topLeft,
               child: Text(
                 "Inspiration",
@@ -140,7 +155,7 @@ class Dashboard extends StatelessWidget {
               ),
             ),
 
-            SizedBox
+            const SizedBox
             (height: 8,),
 
             Image.asset("assets/images/img_inspiration.png",fit: BoxFit.cover,),

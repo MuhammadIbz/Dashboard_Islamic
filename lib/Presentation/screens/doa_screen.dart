@@ -12,7 +12,7 @@ class DoaScreen extends StatelessWidget {
       backgroundColor: ColorApp.white,
       appBar: AppBar(
         backgroundColor: ColorApp.primary,
-        title: Text("Doa Doa",
+        title: const Text("Doa Doa",
         style: TextStyle(
           fontFamily: "PoppinsMedium",
           color: ColorApp.white
@@ -22,7 +22,7 @@ class DoaScreen extends StatelessWidget {
           onPressed: (){
             Navigator.pop(context);
           },
-         icon: Icon(Icons.arrow_back_ios_new_outlined,
+         icon: const Icon(Icons.arrow_back_ios_new_outlined,
          color: ColorApp.white,)),
       ),
     body: Column(
@@ -44,7 +44,7 @@ class DoaScreen extends StatelessWidget {
                       title: "Pagi Malam",
                       onTap: (){
                         Navigator.push(context, MaterialPageRoute(
-                          builder: (context) => DoaListScreen(category: "Pagi & Malam",),));
+                          builder: (context) => const DoaListScreen(category: "Pagi & Malam",),));
                       },
                       ),
 
@@ -52,7 +52,7 @@ class DoaScreen extends StatelessWidget {
                       title: "Rumah",
                       onTap: (){
                         Navigator.push(context, MaterialPageRoute(
-                          builder: (context) => DoaListScreen(category: "Rumah",),));
+                          builder: (context) => const DoaListScreen(category: "Rumah",),));
                       },),
                       
 
@@ -60,28 +60,28 @@ class DoaScreen extends StatelessWidget {
                       title: "Makan",
                       onTap: (){
                         Navigator.push(context, MaterialPageRoute(
-                          builder: (context) => DoaListScreen(category: "Makanan & Minuman",),));
+                          builder: (context) => const DoaListScreen(category: "Makanan & Minuman",),));
                       },),
 
                       CardDoa(imageUrl: "assets/images/ic_doa_perjalanan.png",
                       title: "Perjalanan",
                       onTap: (){
                         Navigator.push(context, MaterialPageRoute(
-                          builder: (context) => DoaListScreen(category: "Perjalanan",),));
+                          builder: (context) => const DoaListScreen(category: "Perjalanan",),));
                       },),
 
                       CardDoa(imageUrl: "assets/images/ic_doa_sholat.png",
                       title: "Sholat",
                       onTap: (){
                         Navigator.push(context, MaterialPageRoute(
-                          builder: (context) => DoaListScreen(category: "Sholat",),));
+                          builder: (context) => const DoaListScreen(category: "Sholat",),));
                       },),
 
                       CardDoa(imageUrl: "assets/images/ic_doa_etika_baik.png",
                       title: "Etika Baik",
                       onTap: (){
                         Navigator.push(context, MaterialPageRoute(
-                          builder: (context) => DoaListScreen(category: "Etika Baik",),));
+                          builder: (context) => const DoaListScreen(category: "Etika Baik",),));
                       },),
 
             ],),

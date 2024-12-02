@@ -22,13 +22,13 @@ class DetailDoa extends StatelessWidget {
         backgroundColor: ColorApp.primary,
         title: Text(
           title,
-          style: TextStyle(fontFamily: "PoppinsMedium", color: ColorApp.white),
+          style: const TextStyle(fontFamily: "PoppinsMedium", color: ColorApp.white),
         ),
         leading: IconButton(
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_ios_new_outlined,
               color: ColorApp.white,
             )),
@@ -36,14 +36,14 @@ class DetailDoa extends StatelessWidget {
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             image: DecorationImage(
                 image: AssetImage("assets/images/bg_detail_doa.png"),
                 fit: BoxFit.cover)),
         child: SingleChildScrollView(
           child: Container(
-            margin: EdgeInsets.all(33),
-            padding: EdgeInsets.all(23),
+            margin: const EdgeInsets.all(33),
+            padding: const EdgeInsets.all(23),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 color: ColorApp.white,
@@ -55,35 +55,35 @@ class DetailDoa extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontFamily: "PoppinsBold",
                       fontSize: 24,
                       color: ColorApp.text),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
                 Text(
                   textAlign: TextAlign.center,
                   arabictext,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontFamily: "PoppinsRegular",
                     fontSize: 24,
                     color: ColorApp.text,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
                 Text(
                   textAlign: TextAlign.center,
                   translation,
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontFamily: "PoppinsRegular",
                       fontSize: 16,
                       color: ColorApp.text),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
                 Text(
@@ -95,7 +95,7 @@ class DetailDoa extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 )
               ],
